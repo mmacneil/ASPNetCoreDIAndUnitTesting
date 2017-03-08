@@ -1,15 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿ 
+using ASPNetCoreDIAndUnitTesting.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASPNetCoreDIAndUnitTesting.Controllers
 {
+   
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IPlayerRepository _playerRepository;
+
+        public HomeController(IPlayerRepository playerRepository)
         {
+            _playerRepository = playerRepository;
+        }
+
+        public IActionResult Index([FromServices] IGameRepository gameRepository)
+        {
+            var players = _playerRepository.GetAll(); // constructor injected
+            var games = gameRepository.GetTodaysGames(); // parameter injected
             return View();
         }
 

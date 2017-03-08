@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ASPNetCoreDIAndUnitTesting.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +30,12 @@ namespace ASPNetCoreDIAndUnitTesting
         {
             // Add framework services.
             services.AddMvc();
+
+            // registering our custom player repository
+            services.AddScoped<IPlayerRepository, PlayerRepository>();
+
+            // registering our custom game repository
+            services.AddScoped<IGameRepository, GameRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
