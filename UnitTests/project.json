@@ -2,6 +2,9 @@
   "version": "1.0.0-*",
 
   "dependencies": {
+    "moq.netcore": "4.4.0-beta8",
+    //http://stackoverflow.com/questions/37288385/moq-netcore-failing-for-net-core-rc2
+    "System.Diagnostics.TraceSource": "4.0.0-rc2-24027",
     "NETStandard.Library": "1.6.0",
     "xunit": "2.2.0",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
