@@ -1,10 +1,12 @@
-﻿ 
+﻿
+using System.Linq;
+using ASPNetCoreDIAndUnitTesting.Models.HomeViewModels;
 using ASPNetCoreDIAndUnitTesting.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASPNetCoreDIAndUnitTesting.Controllers
 {
-   
+
     public class HomeController : Controller
     {
         private readonly IPlayerRepository _playerRepository;
@@ -14,12 +16,16 @@ namespace ASPNetCoreDIAndUnitTesting.Controllers
             _playerRepository = playerRepository;
         }
 
-            public IActionResult Index([FromServices] IGameRepository gameRepository)
+        public IActionResult Index([FromServices] IGameRepository gameRepository)
+        {
+            var model = new IndexViewModel
             {
-                var players = _playerRepository.GetAll(); // constructor injected
-                var games = gameRepository.GetTodaysGames(); // parameter injected
-                return View();
-            }
+                Players = _playerRepository.GetAll().ToList(),    // constructor injected
+                Games = gameRepository.GetTodaysGames().ToList()      // parameter injected
+            };
+
+            return View(model);
+        }
 
         public IActionResult About()
         {
