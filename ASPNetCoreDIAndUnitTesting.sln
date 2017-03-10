@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASPNetCoreDIAndUnitTesting", "src\ASPNetCoreDIAndUnitTesting\ASPNetCoreDIAndUnitTesting.xproj", "{B2509783-9700-430E-98F9-50FE0D8FCCBC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A5515835-0C0B-477D-A275-0F29DE628FD5}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UnitTests", "UnitTests\UnitTests.xproj", "{1EF39670-1504-47EE-B665-DEADCB8E22D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{B2509783-9700-430E-98F9-50FE0D8FCCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2509783-9700-430E-98F9-50FE0D8FCCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2509783-9700-430E-98F9-50FE0D8FCCBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF39670-1504-47EE-B665-DEADCB8E22D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF39670-1504-47EE-B665-DEADCB8E22D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF39670-1504-47EE-B665-DEADCB8E22D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF39670-1504-47EE-B665-DEADCB8E22D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B2509783-9700-430E-98F9-50FE0D8FCCBC} = {BEF7D41B-29B3-4964-9DF7-84DC26B0A7DB}
+		{1EF39670-1504-47EE-B665-DEADCB8E22D6} = {A5515835-0C0B-477D-A275-0F29DE628FD5}
 	EndGlobalSection
 EndGlobal

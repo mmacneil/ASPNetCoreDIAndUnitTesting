@@ -14,12 +14,12 @@ namespace ASPNetCoreDIAndUnitTesting.Controllers
             _playerRepository = playerRepository;
         }
 
-        public IActionResult Index([FromServices] IGameRepository gameRepository)
-        {
-            var players = _playerRepository.GetAll(); // constructor injected
-            var games = gameRepository.GetTodaysGames(); // parameter injected
-            return View();
-        }
+            public IActionResult Index([FromServices] IGameRepository gameRepository)
+            {
+                var players = _playerRepository.GetAll(); // constructor injected
+                var games = gameRepository.GetTodaysGames(); // parameter injected
+                return View();
+            }
 
         public IActionResult About()
         {
